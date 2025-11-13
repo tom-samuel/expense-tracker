@@ -26,7 +26,9 @@ function LoginForm({ onLogin }) {
     fontWeight: "bold",
     borderRadius: "6px",
     border: "none",
-    cursor: "pointer"
+    cursor: "pointer",
+    display: "block",
+    margin: "0 auto"
   };
 
   return (
@@ -49,6 +51,7 @@ function LoginForm({ onLogin }) {
         }}
       >
         <h2 style={{ marginBottom: "1.5rem", color: "#00796b" }}>Expense Tracker</h2>
+
         <input
           type="email"
           placeholder="Email"
@@ -63,7 +66,7 @@ function LoginForm({ onLogin }) {
             placeholder="Password"
             value={password}
             onChange={e => setPassword(e.target.value)}
-            style={{ ...inputStyle, paddingRight: "4rem" }}
+            style={{ ...inputStyle, paddingRight: "3.5rem" }}
           />
           <span
             onClick={() => setShowPassword(!showPassword)}
@@ -75,6 +78,7 @@ function LoginForm({ onLogin }) {
               cursor: "pointer",
               color: "#00796b",
               fontWeight: "bold",
+              fontSize: "0.8rem", // reduced font size
               userSelect: "none"
             }}
           >
