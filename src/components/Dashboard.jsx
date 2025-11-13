@@ -1,7 +1,7 @@
 import React from "react";
 
 function Dashboard({ token }) {
-  // Dummy data for now
+  // Dummy data
   const summary = [
     { title: "Total Income", amount: "$5,000", color: "bg-green-500" },
     { title: "Total Expenses", amount: "$2,200", color: "bg-red-500" },
@@ -16,7 +16,9 @@ function Dashboard({ token }) {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center">Dashboard</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">
+        Dashboard - PRO VERSION
+      </h1>
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
