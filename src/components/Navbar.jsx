@@ -22,7 +22,8 @@ function Navbar({ onLogout }) {
             color: "#fff",
             borderRadius: "6px",
             fontWeight: "bold",
-            cursor: "pointer"
+            cursor: "pointer",
+            border: "none"
           }}
         >
           Logout
