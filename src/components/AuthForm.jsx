@@ -20,36 +20,38 @@ function AuthForm({ setToken }) {
   return (
     <form
       onSubmit={submit}
-      className="max-w-md mx-auto p-4 bg-white rounded shadow"
+      className="w-full max-w-md p-8 bg-white rounded-xl shadow-xl"
     >
-      <h2 className="text-xl mb-4">{action === "login" ? "Login" : "Register"}</h2>
+      <h2 className="text-2xl font-bold mb-6 text-center">
+        {action === "login" ? "Login" : "Register"}
+      </h2>
       <input
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="w-full mb-2 p-2 border rounded"
+        className="w-full mb-4 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
       <input
         type="password"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        className="w-full mb-2 p-2 border rounded"
+        className="w-full mb-4 p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
       <button
         type="submit"
-        className="w-full bg-blue-500 text-white p-2 rounded"
+        className="w-full py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition"
       >
         {action === "login" ? "Login" : "Register"}
       </button>
       <p
-        className="mt-2 text-sm cursor-pointer text-blue-700"
+        className="mt-4 text-sm text-center text-blue-700 cursor-pointer hover:underline"
         onClick={() =>
           setAction(action === "login" ? "register" : "login")
         }
       >
-        {action === "login" ? "Create account" : "Back to login"}
+        {action === "login" ? "Create an account" : "Back to login"}
       </p>
     </form>
   );
