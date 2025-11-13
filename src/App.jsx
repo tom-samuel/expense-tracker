@@ -5,7 +5,11 @@ import Dashboard from "./components/Dashboard";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
-  return loggedIn ? <Dashboard /> : <LoginForm onLogin={setLoggedIn} />;
+  const handleLogout = () => {
+    setLoggedIn(false);
+  };
+
+  return loggedIn ? <Dashboard onLogout={handleLogout} /> : <LoginForm onLogin={setLoggedIn} />;
 }
 
 export default App;
