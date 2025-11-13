@@ -1,18 +1,32 @@
+/* Global Styles */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f6f8;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
 }
 
+/* Buttons */
 button {
   cursor: pointer;
   border: none;
+  transition: all 0.2s ease-in-out;
 }
 
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Inputs */
 input {
   outline: none;
-  border-radius: 4px;
-  padding: 0.5rem;
+  border-radius: 6px;
+  padding: 0.6rem;
   border: 1px solid #ccc;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #00796b;
 }
